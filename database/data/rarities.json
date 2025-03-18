@@ -1,0 +1,23 @@
+[
+  {
+    "rarity_name": "poor"
+  },
+  {
+    "rarity_name": "common"
+  },
+  {
+    "rarity_name": "uncommon"
+  },
+  {
+    "rarity_name": "rare"
+  },
+  {
+    "rarity_name": "epic"
+  },
+  {
+    "rarity_name": "legendary"
+  },
+  {
+    "rarity_name": "mythic"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "title_name": "brawler",
+    "min_kills": 5
+  },
+  {
+    "title_name": "fighter",
+    "min_kills": 10
+  },
+  {
+    "title_name": "killer",
+    "min_kills": 20
+  },
+  {
+    "title_name": "slayer",
+    "min_kills": 40
+  },
+  {
+    "title_name": "crusher",
+    "min_kills": 60
+  },
+  {
+    "title_name": "vanquisher",
+    "min_kills": 80
+  },
+  {
+    "title_name": "destroyer",
+    "min_kills": 100
+  },
+  {
+    "title_name": "beast",
+    "min_kills": 130
+  },
+  {
+    "title_name": "annihilator",
+    "min_kills": 160
+  },
+  {
+    "title_name": "reaper",
+    "min_kills": 190
+  },
+  {
+    "title_name": "predator",
+    "min_kills": 220
+  },
+  {
+    "title_name": "terror",
+    "min_kills": 250
+  },
+  {
+    "title_name": "devastator",
+    "min_kills": 300
+  },
+  {
+    "title_name": "juggernaut",
+    "min_kills": 350
+  },
+  {
+    "title_name": "legend",
+    "min_kills": 400
+  },
+  {
+    "title_name": "apex",
+    "min_kills": 500
+  },
+  {
+    "title_name": "godlike",
+    "min_kills": 600
+  },
+  {
+    "title_name": "ascendant",
+    "min_kills": 700
+  },
+  {
+    "title_name": "omniscient",
+    "min_kills": 800
+  },
+  {
+    "title_name": "immortal",
+    "min_kills": 900
+  },
+  {
+    "title_name": "celestial",
+    "min_kills": 1000
+  },
+  {
+    "title_name": "eternal",
+    "min_kills": 1500
+  },
+  {
+    "title_name": "titan",
+    "min_kills": 2000
+  },
+  {
+    "title_name": "apocalypse",
+    "min_kills": 2500
+  },
+  {
+    "title_name": "eternal force",
+    "min_kills": 3000
+  },
+  {
+    "title_name": "universe breaker",
+    "min_kills": 4000
+  },
+  {
+    "title_name": "omnipotent",
+    "min_kills": 5000
+  }
+]

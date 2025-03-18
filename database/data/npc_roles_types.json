@@ -1,0 +1,14 @@
+[
+  {
+    "npc_role_name": "vendor",
+    "npc_role_table_name": "vendor_items"
+  },
+  {
+    "npc_role_name": "quest_giver",
+    "npc_role_table_name": "npc_quests"
+  },
+  {
+    "npc_role_name": "banker",
+    "npc_role_table_name": null
+  }
+]

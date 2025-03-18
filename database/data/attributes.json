@@ -1,0 +1,44 @@
+[
+  {
+    "attribute_name": "hp"
+  },
+  {
+    "attribute_name": "max_hp"
+  },
+  {
+    "attribute_name": "hp_regeneration_rate"
+  },
+  {
+    "attribute_name": "mana"
+  },
+  {
+    "attribute_name": "max_mana"
+  },
+  {
+    "attribute_name": "mana_regeneration_rate"
+  },
+  {
+    "attribute_name": "stamina"
+  },
+  {
+    "attribute_name": "max_stamina"
+  },
+  {
+    "attribute_name": "stamina_regeneration_rate"
+  },
+  {
+    "attribute_name": "attack_speed"
+  },
+  {
+    "attribute_name": "damage"
+  },
+  {
+    "attribute_name": "activation_distance"
+  },
+  {
+    "attribute_name": "attack_distance"
+  },
+    {
+    "attribute_name": "movement_speed"
+  }
+]

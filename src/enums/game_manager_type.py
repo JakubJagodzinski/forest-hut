@@ -1,0 +1,25 @@
+from enum import StrEnum
+
+
+class GameManagerType(StrEnum):
+    KILL_SERIES = 'kill_series'
+    COMMAND = 'command'
+    ITEM_ICONS = 'item_icons'
+    ERROR_MESSAGES = 'error_messages'
+    CHAT = 'chat'
+    QUOTES = 'quotes'
+    EQUIPMENT = 'equipment'
+    INVENTORY = 'inventory'
+    PLAYER = 'player'
+    MAP = 'map'
+    LOOT = 'loot'
+    DATETIME = 'datetime'
+    VENDOR = 'vendor'
+    CONVERSATION = 'conversation'
+    NPCS = 'npcs'
+    POTIONS = 'potions'
+    INTERFACE = 'interface'
+    INTERACTIVE_OBJECTS = 'interactive_objects'
+    COMBAT = 'combat'
+    BANK = 'bank'
+    SPELL_ICONS = 'spell_icons'

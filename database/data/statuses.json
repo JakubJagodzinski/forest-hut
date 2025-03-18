@@ -1,0 +1,11 @@
+[
+  {
+    "status_name": "friendly"
+  },
+  {
+    "status_name": "neutral"
+  },
+  {
+    "status_name": "hostile"
+  }
+]

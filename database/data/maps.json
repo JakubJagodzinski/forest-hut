@@ -1,0 +1,12 @@
+[
+  {
+    "map_name": "Desolation of Bones",
+    "min_lvl": 1,
+    "max_lvl": 10
+  },
+  {
+    "map_name": "Haunted Forest",
+    "min_lvl": 10,
+    "max_lvl": 20
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "parent_category_id": null,
+    "category_name": "Crafting Materials",
+    "category_description": "Can be gathered, looted and bought from vendor."
+  },
+  {
+    "parent_category_id": null,
+    "category_name": "Gems",
+    "category_description": "Powerful addition to weapons and armor.",
+    "category_image": ""
+  },
+  {
+    "parent_category_id": null,
+    "category_name": "Trash",
+    "category_description": "Can be sold to vendor or thrown away."
+  },
+  {
+    "parent_category_id": null,
+    "category_name": "Weapons",
+    "category_description": "Can be quipped to deal damage."
+  },
+  {
+    "parent_category_id": null,
+    "category_name": "Armor",
+    "category_description": "Used to protect and grant attributes."
+  }
+]

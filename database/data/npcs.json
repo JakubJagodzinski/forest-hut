@@ -1,0 +1,98 @@
+[
+  {
+    "npc_name": "Cultist",
+    "sprite_name": "cultist",
+    "rarity": "common",
+    "status": "friendly",
+    "faction": "Wanderers",
+    "lvl": 1,
+    "attributes": {
+      "hp": 100,
+      "max_hp": 100,
+      "damage": 10,
+      "attack_speed": 10,
+      "movement_speed": 150,
+      "attack_distance": 50,
+      "activation_distance": 150
+    },
+    "npc_roles": [
+      "vendor"
+    ]
+  },
+  {
+    "npc_name": "Necromancer",
+    "sprite_name": "necromancer",
+    "rarity": "common",
+    "status": "friendly",
+    "faction": "Wanderers",
+    "lvl": 1,
+    "attributes": {
+      "hp": 100,
+      "max_hp": 100,
+      "damage": 10,
+      "attack_speed": 10,
+      "movement_speed": 150,
+      "attack_distance": 50,
+      "activation_distance": 150
+    },
+    "npc_roles": [
+    ]
+  },
+  {
+    "npc_name": "Possessed",
+    "sprite_name": "possessed",
+    "rarity": "common",
+    "status": "hostile",
+    "faction": "Cult of Death",
+    "lvl": 1,
+    "attributes": {
+      "hp": 100,
+      "max_hp": 100,
+      "damage": 10,
+      "attack_speed": 10,
+      "movement_speed": 150,
+      "attack_distance": 50,
+      "activation_distance": 150
+    },
+    "npc_roles": [
+    ]
+  },
+  {
+    "npc_name": "Skeleton Warrior",
+    "sprite_name": "skeleton_warrior",
+    "rarity": "common",
+    "status": "hostile",
+    "faction": "Cult of Death",
+    "lvl": 1,
+    "attributes": {
+      "hp": 100,
+      "max_hp": 100,
+      "damage": 10,
+      "attack_speed": 10,
+      "movement_speed": 150,
+      "attack_distance": 50,
+      "activation_distance": 150
+    },
+    "npc_roles": [
+    ]
+  },
+  {
+    "npc_name": "Sorceress",
+    "sprite_name": "sorceress",
+    "rarity": "common",
+    "status": "friendly",
+    "faction": "Settlers",
+    "lvl": 1,
+    "attributes": {
+      "hp": 100,
+      "max_hp": 100,
+      "damage": 10,
+      "attack_speed": 10,
+      "movement_speed": 150,
+      "attack_distance": 50,
+      "activation_distance": 150
+    },
+    "npc_roles": [
+    ]
+  }
+]

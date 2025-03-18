@@ -1,0 +1,23 @@
+[
+  {
+    "equipment_slot_name": "head"
+  },
+  {
+    "equipment_slot_name": "chest"
+  },
+  {
+    "equipment_slot_name": "legs"
+  },
+  {
+    "equipment_slot_name": "feet"
+  },
+  {
+    "equipment_slot_name": "hands"
+  },
+  {
+    "equipment_slot_name": "finger"
+  },
+  {
+    "equipment_slot_name": "weapon"
+  }
+]

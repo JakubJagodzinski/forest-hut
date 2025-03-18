@@ -1,0 +1,48 @@
+Version 0.1.0
+
+PLAYER:
+    - leveling system
+    - statistics increase with each level
+
+EQUIPMENT:
+    - player can wear armor and weapon
+
+OBJECTS:
+    - interactive objects
+
+INVENTORY:
+    - items are stored in inventory
+
+LOOT SYSTEM:
+    - items can be obtained from enemies and looted from chests
+
+KILL SERIES:
+    - killing an enemy starts kill series
+    - when next enemy is hit, kill series remaining time is refreshed
+    - each kill increases kill in series
+    - during whole kill series the remaining time bar,
+      actual kill title and kills quantity is displayed above lower user interface bar
+    - when kill series ends player gets bonus xp
+
+CHAT:
+    - player can send messages to chat
+    - mature language filter
+    - info from various modules, etc. system, legendary loot, returning to town spell
+
+ENEMIES:
+    - enemies start to chase player when he appears in their field range
+    - enemies run back to their previous position when player leaves their zone
+    - enemies drop random items and gold
+
+SPELLS:
+    - player can create portal to map marked as town
+
+NPCS:
+    - friendly npcs with assigned roles
+
+VENDORS:
+    - npcs can sell and buy items
+
+QUOTES
+    - enemies quote when start chasing player
+    - friendly NPC quote when player is nearby

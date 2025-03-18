@@ -1,0 +1,10 @@
+[
+  {
+    "object_type_name": "location_changer",
+    "object_type_table_name": "location_changers"
+  },
+  {
+    "object_type_name": "lootable_object",
+    "object_type_table_name": "lootable_object_items"
+  }
+]
