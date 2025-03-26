@@ -7,19 +7,22 @@ library in Python.
 Started on 21st October 2024, and work is still in progress.
 
 ## Contents
-
-- [Author](#author)
-- [Version](#version)
+- [Screenshots](#screenshots)
 - [Requirements](#requirements)
-- [How to run](#installation)
+- [How to run](#how-to-run)
+- [Version](#version)
+- [Author](#author)
 
-## Author
+## Screenshots
 
-Jakub Jagodziński
-
-## Version
-
-0.1.0
+![Login screen](screenshots/login.png)
+![Chase](screenshots/chase.png)
+![Fight](screenshots/fight.png)
+![Death](screenshots/death.png)
+![After death](screenshots/after_death.png)
+![Portal cast](screenshots/portal_cast.png)
+![Portal after cast](screenshots/portal_after_cast.png)
+![Vendor](screenshots/vendor.png)
 
 ## Requirements
 
@@ -47,3 +50,8 @@ Required software and dependencies:
    python main.py
    ```
 
+## Version
+0.1.0
+
+## Author
+Jakub Jagodziński
