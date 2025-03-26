@@ -71,7 +71,8 @@ class GameContext:
                 SCREEN_WIDTH,
                 SCREEN_HEIGHT
             ),
-            pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF
+            #pygame.FULLSCREEN |
+            pygame.HWSURFACE | pygame.DOUBLEBUF
         )
 
         return screen_surface

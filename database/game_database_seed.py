@@ -10,7 +10,7 @@ from src.common_utils import load_json
 from src.enums.rarity_type import RarityType
 from src.paths import PATH_ITEM_CATEGORIES_JSON, PATH_CURRENCIES_JSON, PATH_MAPS_JSON, \
     PATH_NPC_ROLES_TYPES_JSON, PATH_ATTRIBUTES_JSON, PATH_EQUIPMENT_SLOTS_JSON, \
-    PATH_KILL_SERIES_TITLES_JSON, PATH_OBJECT_TYPES_JSON, PATH_RARITIES_JSON, PATH_FACTIONS_JSON
+    PATH_KILL_SERIES_TITLES_JSON, PATH_OBJECT_TYPES_JSON, PATH_RARITIES_JSON, PATH_FACTIONS_JSON, PATH_DIR_ITEMS
 
 
 def seed_kill_series_titles(database_connector, kill_series_titles):
@@ -483,6 +483,9 @@ def main():
 
     object_types = load_json(PATH_OBJECT_TYPES_JSON)
     seed_object_types(database_connector, object_types)
+
+    items = load_json(PATH_DIR_ITEMS)
+    seed_items(database_connector, items)
 
     database_connector.disconnect()
 

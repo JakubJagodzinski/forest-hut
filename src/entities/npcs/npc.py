@@ -36,7 +36,7 @@ class Npc(Character):
     MINI_HP_BAR_OFFSET_Y = 20
 
     def __init__(self, game_surface, map_id, x, y, draw_size, name, sprite_name,
-                 attributes, faction, rarity, lvl, roles_names, title=None):
+                 attributes, faction, rarity, lvl, roles_names, status, title=None):
         super().__init__(
             game_surface=game_surface,
             map_id=map_id,
@@ -47,7 +47,8 @@ class Npc(Character):
             name=name,
             lvl=lvl,
             attributes=attributes,
-            faction=faction
+            faction=faction,
+            status=status
         )
 
         self.rarity = rarity

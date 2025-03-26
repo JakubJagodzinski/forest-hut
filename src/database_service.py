@@ -5,7 +5,7 @@ from database.game_database_table_columns_names import MapObjectPositionsTable, 
     AttributesTable, ItemsTable, CharacterEquipmentTable, CurrenciesTable, CharacterCurrenciesTable, \
     CharacterBankLimitsTable, CharacterInventoryLimitsTable, CharacterInventoryTable, EquipmentSlotsTable, \
     NpcAttributesTable, KillSeriesTitlesTable, ObjectTypesTable, CharacterSpellsTable, SpellsTable, NpcSpellsTable, \
-    CharacterPositionsTable, FactionsTable, MapFadingWallPositionsTable, MapFadingWallsTable
+    CharacterPositionsTable, FactionsTable, MapFadingWallPositionsTable, MapFadingWallsTable, RaritiesTable
 from src.paths import GAME_DATABASE_PATH
 
 
@@ -119,6 +119,22 @@ class DatabaseService:
             return cursor.fetchone()
 
     @staticmethod
+    def get_rarity_by_id(id):
+        with DatabaseService._connect() as conn:
+            cursor = conn.cursor()
+
+            cursor.execute(
+                f'''
+                SELECT {RaritiesTable.RARITY_NAME}
+                FROM {RaritiesTable._TABLE_NAME}
+                WHERE {RaritiesTable.RARITY_ID} = ?
+                ''',
+                (id,)
+            )
+
+            return cursor.fetchone()[0]
+
+    @staticmethod
     def get_map_npc_positions(map_id):
         with DatabaseService._connect() as conn:
             cursor = conn.cursor()
@@ -164,7 +180,7 @@ class DatabaseService:
                 SELECT {NpcRolesTypesTable.NPC_ROLE_NAME}
                 FROM {NpcRolesTable._TABLE_NAME}
                 JOIN {NpcRolesTypesTable._TABLE_NAME}
-                ON {NpcRolesTable.NPC_ROLE_TYPE_ID} = {NpcRolesTypesTable.NPC_ROLE_TYPE_ID}
+                ON {NpcRolesTable._TABLE_NAME}.{NpcRolesTable.NPC_ROLE_TYPE_ID} = {NpcRolesTypesTable._TABLE_NAME}.{NpcRolesTypesTable.NPC_ROLE_TYPE_ID}
                 WHERE {NpcRolesTable.NPC_ID} = ?
                 ''',
                 (
@@ -337,6 +353,17 @@ class DatabaseService:
             return [dict(row) for row in cursor.fetchall()]
 
     @staticmethod
+    def get_items_count():
+        with DatabaseService._connect() as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                f'''
+                SELECT COUNT(*)
+                FROM {ItemsTable._TABLE_NAME}'''
+            )
+            return cursor.fetchone()[0]
+
+    @staticmethod
     def get_random_items(how_many, allow_recursive=True):
         with DatabaseService._connect() as conn:
             cursor = conn.cursor()
@@ -353,6 +380,10 @@ class DatabaseService:
                 )
             )
             items = [dict(row) for row in cursor.fetchall()]
+
+            if DatabaseService.get_items_count() == 0:
+                return items
+
             if allow_recursive:
                 while len(items) < how_many:
                     items.extend(DatabaseService.get_random_items(how_many - len(items), allow_recursive=False))

@@ -54,6 +54,7 @@ class GameScreen(Screen):
         account_id = self.accounts_manager.get_account_id()
 
         item_icons_manager = ItemIconsManager()
+        item_icons_manager.load_item_icons()
         ItemTile.setup_references()
         command_manager = CommandManager()
         kill_series_manager = KillSeriesManager(self.game_surface)

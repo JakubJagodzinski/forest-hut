@@ -261,7 +261,7 @@ class LootManager:
         for item_info, item_quantity, item_position in self.items[self.current_map_id]:
             item_x, item_y = item_position
             item_position_on_screen = self.map_manager.convert_map_position_to_screen_position(item_x, item_y)
-            item_rarity = item_info[ItemsTable.RARITY_ID]
+            item_rarity = DatabaseService.get_rarity_by_id(item_info[ItemsTable.RARITY_ID])
             self._draw_item_glow(item_rarity, item_position_on_screen)
             self.draw_loot_icon(item_position_on_screen)
 
@@ -315,9 +315,9 @@ class LootManager:
     def _draw_loot_name(self, loot_name, loot_position, loot_rarity=RarityType.COMMON, is_hovered=False) -> None:
         if is_hovered:
             text_color = BLACK
-            background_color = RARITY_COLORS[loot_rarity]
+            background_color = RARITY_COLORS[DatabaseService.get_rarity_by_id(loot_rarity)]
         else:
-            text_color = RARITY_COLORS[loot_rarity]
+            text_color = RARITY_COLORS[DatabaseService.get_rarity_by_id(loot_rarity)]
             background_color = WHITE
 
         loot_name_text = self.LOOT_NAME_FONT.render(loot_name, True, text_color)

@@ -107,9 +107,10 @@ class NpcsManager:
                         name=npc_data[NpcsTable.NPC_NAME],
                         attributes=npc_attributes,
                         faction=npc_data[NpcsTable.FACTION_ID],
-                        rarity=npc_data[NpcsTable.RARITY_ID],
+                        rarity=DatabaseService.get_rarity_by_id(npc_data[NpcsTable.RARITY_ID]),
                         lvl=npc_data[NpcsTable.LVL],
                         roles_names=npc_roles_names,
+                        status=npc_data[NpcsTable.STATUS_ID]
                     )
                 )
 

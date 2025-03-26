@@ -3,6 +3,7 @@ from abc import abstractmethod
 from src.common_utils import normalise_movement_vector
 from src.entities.entity import Entity
 from src.enums.character_attribute_type import CharacterAttributeType
+from src.enums.character_status_type import CharacterStatusType
 from src.enums.move_direction_type import MoveDirection
 from src.enums.sprite_state import SpriteState
 from src.sprites.character_sprite import CharacterSprite
@@ -19,7 +20,7 @@ class Character(Entity):
     SPEED_WALK = 150
     SPEED_RUN = 300
 
-    def __init__(self, game_surface, map_id, x, y, draw_size, sprite_name, name, lvl, attributes, faction):
+    def __init__(self, game_surface, map_id, x, y, draw_size, sprite_name, name, lvl, attributes, faction, status = CharacterStatusType.NEUTRAL):
         super().__init__(
             game_surface=game_surface,
             map_id=map_id,
@@ -31,6 +32,8 @@ class Character(Entity):
 
         if sprite_name is not None:
             self.animated_sprite = CharacterSprite(self.game_surface, sprite_name, self._draw_size)
+
+        self.status = status
 
         self.faction = faction
         self._lvl = lvl
@@ -198,8 +201,16 @@ class Character(Entity):
         return (self.row == self.destination_row_and_column[0]
                 and self.column == self.destination_row_and_column[1])
 
+    @property
+    def is_neutral(self):
+        return self.status == CharacterStatusType.NEUTRAL
+
+    @property
+    def is_hostile(self):
+        return self.status == CharacterStatusType.HOSTILE
+
     def is_enemy(self, target) -> bool:
-        return self.faction != target.faction
+        return self.faction != target.faction and target.is_hostile
 
     def set_movement_speed(self, speed: int) -> None:
         self.movement_speed = speed

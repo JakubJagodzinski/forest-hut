@@ -6,6 +6,7 @@ from database.game_database_table_columns_names import CharactersTable, Characte
 from src.colors import SEA_BLUE
 from src.entities.character import Character, CHARACTER_DRAW_SIZE
 from src.enums.character_attribute_type import CharacterAttributeType
+from src.enums.character_status_type import CharacterStatusType
 from src.enums.chat_message_color_type import ChatMessageColorType
 from src.enums.move_direction_type import MoveDirection
 from src.enums.sound_type import SoundType
@@ -83,7 +84,8 @@ class PlayerManager(Character):
                 name=self.character_data[CharactersTable.CHARACTER_NAME],
                 lvl=self.character_data[CharactersTable.LVL],
                 attributes=attributes,
-                faction=faction
+                faction=faction,
+                status=CharacterStatusType.FRIENDLY
             )
 
             self._draw_position = (

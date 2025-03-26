@@ -5,6 +5,7 @@ import pygame
 
 from database.game_database_table_columns_names import ItemsTable, AttributesTable, ItemAttributesTable
 from src.colors import BLACK, WHITE, RARITY_COLORS
+from src.database_service import DatabaseService
 from src.fonts import FONT_ARIAL_18, FONT_ARIAL_16
 from src.interface.interface_constants import BORDER_WIDTH, INTERFACE_TILE_SIZE
 from src.interface.interface_tile import InterfaceTile
@@ -129,7 +130,7 @@ class ItemTile(InterfaceTile):
             name_text = self.NAME_FONT.render(
                 self.item_info[ItemsTable.ITEM_NAME],
                 False,
-                RARITY_COLORS[self.item_info[ItemsTable.RARITY_ID]]
+                RARITY_COLORS[DatabaseService.get_rarity_by_id(self.item_info[ItemsTable.RARITY_ID])]
             )
             infos = [name_text]
             infos_widths = [name_text.get_width()]
